@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    background-color: #00bfff;
+}
+.App {
+    background-color: #00bfff;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-not-logged {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.ul li {
+   padding: 0.4rem;
+}
+.App h1 {
+    padding: 1rem;
+}
+.App h1:hover {
+    background-color: #003399;
+    color: white;
+}
+.hello-user {
+    text-transform: capitalize;
+    color: #ffff66;
+    letter-spacing: 5px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.employee-table {
+  display: flex;
+  justify-content: center;
+}
+
+.employee-table td, .employee-table th {
+    border: 1px solid #003399;
+    padding: 8px;
+}
+
+.employee-table th {
+    width: 200px;
+    color: black;
+    align-items: center;
+}
+
+.employee-hover tr:hover th {
+    background-color: #003399;
+    color: white !important;
+}
+
+.employee-thead {
+    background-color: #d9d9d9;
+}
+
+.employee:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+label {
+    padding-right: 10px;
+}
+
+input {
+    padding: 6px;
+    border: 1px solid #003399;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+button {
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.done-btn {
+    background-color: #04AA6D;
+    color: white;
+    margin-left: 10px;
+}
+
+.delete-btn {
+    background-color: #DC143C;
+    color: white;
+    margin-left: 10px;
+}
+
+.employee-update {
+    display: flex;
+    justify-content: center;
+}
+
+.employee-update p{
+    width: 200px;
+    border: 1px solid navy;
+}
+
+.update-name {
+    background-color: white;
+    padding: 5px;
+    color: #003399;
+}
+
+.responsive-br {
+    display: none;
+}
+
+.add-btn {
+    border-radius: 3px;
+    background-color: navy;
+    color: white;
+    margin-left: 10px;
+}
+
+.employee-calculator {
+    text-align: left;
+}
+
+.deleted-employee {
+    color: white;
+}
+
+.deleted-post-link {
+    color: #003399;
+}
+
+.deleted-post-link:hover {
+    color: white;
+}
+.table-body {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    display: inline-block;
+}
+
+.loading {
+    text-align: center;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    color: white;
+}
+
+.rotate-loading {
+    animation: rotation 2s infinite linear;
+}
+
+.login-btn {
+    width: 200px;
+    background-color: #003399;
+    color: white;
+    border-radius: 5px;
+}
+
+.signup-btn {
+    width: 200px;
+    background-color: #003399;
+    color: white;
+    border-radius: 5px;
+}
+
+.errMsg {
+    background-color: #f2f2f2;
+    color: #003399;
+    margin-top: 1rem;
+}
+
+.nav-icon {
+    font-size: xx-large;
+    margin: 1rem 1rem 0 1rem;
+    color: #d9d9d9;   
+}
+
+.settings-container {
+    background-color: #003399;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.delete-user-container {
+    position: relative;
+    width: 100%;
+}
+
+.delete-all-container {
+    position: relative;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,50%);
+}
+
+.btn-delete {
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.modal-center {
+    min-width: 100%;
+}
+
+.modal-container {
+    background-color: #003399;
+    color: white;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,50%);
+    position: relative;
+    border-radius: 5px;
+}
+
+.confirm-delete-btn {
+    margin: 10px;
+    background-color: #DC143C;
+    color: white;
+}
+.cancel-delete-btn {
+    margin: 10px;
+    background-color: #00bfff;
+    color: #f2f2f2;
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+}
+.modal-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes rotation {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+@media only screen and (max-width: 1000px) {
+    .nav h1 {
+        font-size: small;
+    }
+    .employee-table {
+        font-size: small;
+    }
+    .responsive-br {
+        display: inline-block;
+    }
+    .nav-not-logged {
+        font-size: x-small;
+    }
+    .nav {
+        display: flex;
+        text-align: right;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #003399;
+        border-radius: 4px;
+    }
+    .employee-table th {
+        min-width: 100px;
+    }
+    .employee-table {
+        justify-content: left;        
+    }
+    .settings-container {
+        position: static;
+    }
+    .nav-icon {
+        margin: 0.5rem;
+    }
+    button {
+        margin: 0 !important;
+    }
+  }
