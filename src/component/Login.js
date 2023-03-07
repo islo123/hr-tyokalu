@@ -7,8 +7,9 @@ import { useAuthContext } from '../hooks/useAuthContext'
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false)
     const {login, errMsg, setErrMsg} = useLogin("");
-
+    
     const navigate = useNavigate()
 
     const { user } = useAuthContext()
@@ -17,7 +18,9 @@ export default function Login() {
         e.preventDefault();
 
         try {
+            setLoading(true)
             await login(email, password)
+            setLoading(false)
             setEmail('')
             setPassword('')
 
@@ -32,7 +35,10 @@ export default function Login() {
         }  
 
     }
-
+  
+  if(loading) {
+    <div>Loding...</div>
+  }
   return (
     <div>
         <div>
