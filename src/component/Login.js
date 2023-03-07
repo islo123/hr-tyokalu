@@ -37,7 +37,7 @@ export default function Login() {
     }
   
   if(loading) {
-    <div>Loding...</div>
+    return <div>Loding...</div>
   }
   return (
     <div>
