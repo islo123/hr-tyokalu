@@ -46,7 +46,7 @@ export default function DeleteListAndUser() {
             <div className='modal-center'>
               <p>Oletko varma, että haluat poista käyttäjän?</p>
               <button className='confirm-delete-btn' onClick={() => {return deleteUser(user.user._id)}} type="button">Poista käyttäjä <FaTrashAlt style={{color: "white", fontSize: "1rem"}}/></button>
-              <button className='cancel-delete-btn' onClick={() => setIsModalOpen(false)}>Cancel</button>
+              <button className='cancel-delete-btn' onClick={() => setIsModalOpen(false)}>Peruuta</button>
             </div>
           </motion.div >
         }
